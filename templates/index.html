@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/total.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     <title>Главная страница</title>
 </head>
 <body>
-    <h1>Выбери субъект Новороссии:</h1>
-    <ul>
-        <li><a href="/lpr">ЛНР</a></li>
-        <li><a href="/dpr">ДНР</a></li>
-        <li><a href="/zo">ЗО</a></li>
-        <li><a href="/ho">ХО</a></li>
+    <h1 class="title">Выберите субъект Новороссии</h1>
+    <ul class="menu">
+        <li>
+            <a href="/lpr">ЛНР</a>
+        </li>
+        <li>
+            <a href="/dpr">ДНР</a>
+        </li>
+        <li>
+            <a href="/zo">ЗО</a>
+        </li>
+        <li>
+            <a href="/ho">ХО</a>
+        </li>
     </ul>
 </body>
 </html>
