@@ -7,11 +7,12 @@ body {
     margin: 0;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Halvar Breit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;;
 }
 
-p {
+* {
+    scroll-behavior: smooth;
     font-family: "Inter Variable", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;;
 }
 
@@ -24,3 +25,93 @@ a {
 a:hover {
     color: #cfcfcf;
 }
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 80vw;
+    height: 500px;
+    padding: 20px;
+    gap: 4vw;
+}
+
+
+.carousel.places {
+    anchor-name: --place-carousel;
+}
+
+.carousel.feats {
+    anchor-name: --feat-carousel;
+}
+
+.carousel.faces {
+    anchor-name: --face-carousel;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    display: flex;
+    scroll-snap-align: center;
+}
+
+.carousel-item div {
+    display: flex;
+    width: 550px;
+    flex-direction: column;
+}
+
+.carousel-item img {
+    width: 650px;
+    list-style-type: none;
+    background-color: #eeeeee;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.carousel::scroll-button(*) {
+  border: 0;
+  position: absolute;
+  position-anchor: --place-carousel;
+  top: calc(anchor(top) + 275px);
+  font-size: 2rem;
+  background: none;
+  color: #FFFFFF;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.carousel::scroll-button(*):hover,
+.carousel::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.carousel::scroll-button(left) {
+  content: "←";
+  right: calc(anchor(left) + 40px);
+  bottom: calc(anchor(top) + 23px);
+}
+
+.carousel::scroll-button(right) {
+  content: "→";
+  left: calc(anchor(right) + 40px);
+  bottom: calc(anchor(top) + 23px);
+}
+
+/*.carousel:nth {
+    filter: drop-shadow(5px 5px 100px rgba(242, 255, 0, 0.75));
+}*/

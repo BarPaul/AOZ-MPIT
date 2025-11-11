@@ -8,7 +8,199 @@
     <title>Донецкая Народная Республика</title>
 </head>
 <body>
-    <h1>Эта страница о Донецкой Народной Республике</h1>
-    <p>Вернуться на <a href="/" alt="Ссылка на главную">главную</a> страницу</p>
+    <header>
+        <div class="header-left">
+            <a href="#main" aria-label="На главную страницу">
+                <img src="{{ url_for('static', filename='media/logo.svg') }}" alt="Логотип">
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#places">Места</a></li>
+                <li><a href="#feats">Подвиги</a></li>
+                <li><a href="#faces">Лица</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="flag-selector">
+                <span class="current-flag">
+                    <img src="{{ url_for('static', filename='media/dpr/flag.svg') }}" alt="Флаг ДНР">
+                </span>
+                <nav class="republic-switcher">
+                    <a href="/lpr" aria-label="Перейти к ЛНР">
+                        <img src="{{ url_for('static', filename='media/lpr/flag.svg') }}" alt="Флаг ЛНР">
+                    </a>
+                    <a href="/zo" aria-label="Перейти к ЗО">
+                        <img src="{{ url_for('static', filename='media/zo/flag.svg') }}" alt="Флаг ЗО">
+                    </a>
+                    <a href="/ho" aria-label="Перейти к ХО">
+                        <img src="{{ url_for('static', filename='media/ho/flag.svg') }}" alt="Флаг ХО">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="slide" id="main">
+        <div>
+            <img class="cover-image" src="{{ url_for('static', filename='media/dpr/front.png') }}">
+        </div>
+        <div class="block">
+            <div class="block white title">
+                <h1>ДОНЕЦКАЯ<br>
+                    НАРОДНАЯ<br>
+                    РЕСПУБЛИКА</h1>
+            </div>
+            <div class="block description">
+                <p>Описание Описание Описание Описание Описание Описание 
+            Описание Описание Описание Описание Описание</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide center" id="places">
+        <ul class="carousel places">
+            <li class="carousel-item">
+                <img src="{{ url_for('static', filename='media/dpr/places/1.jpg') }}" alt="">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <img src="{{ url_for('static', filename='media/dpr/places/2.jpg') }}" alt="">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <img src="{{ url_for('static', filename='media/dpr/places/3.jpg') }}" alt="">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <img src="{{ url_for('static', filename='media/dpr/places/4.jpg') }}" alt="">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide center" id="feats">
+        <ul class="carousel feats">
+            <li class="carousel-item">
+                <div class="block white">
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <div class="block white">
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide center" id="faces">
+        <ul class="carousel faces">
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+                <img src="{{ url_for('static', filename='media/dpr/places/3.jpg') }}" alt="">
+            </li>
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+                <img src="{{ url_for('static', filename='media/dpr/places/3.jpg') }}" alt="">
+            </li>
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+                <img src="{{ url_for('static', filename='media/dpr/places/3.jpg') }}" alt="">
+            </li>
+            <li class="carousel-item">
+                <div>
+                    <h1>Заголовок</h1>
+                    <h2>Место</h2>
+                    <p>Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание Описание 
+                        Описание Описание Описание Описание 
+                    </p>
+                </div>
+                <img src="{{ url_for('static', filename='media/dpr/places/4.jpg') }}" alt="">
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
