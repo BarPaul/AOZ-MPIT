@@ -19,4 +19,4 @@ def not_found_handler(_):
     return render_template('error_404.html')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=80)
